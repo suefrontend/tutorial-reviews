@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Form from "./Form";
 
 async function getPosts() {
   const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
@@ -21,6 +22,7 @@ export default async function Home() {
       {data.map((post) => (
         <h1>{post.title}</h1>
       ))}
+      <Form />
     </main>
   );
 }
