@@ -8,8 +8,8 @@ async function getPosts() {
   return res.json();
 }
 export default async function Home() {
-  const data = await getPosts();
-  console.log("data", data);
+  const data: { id: number; title: string }[] = await getPosts();
+
   return (
     <main className="py-7 px-48">
       <Link
@@ -18,6 +18,9 @@ export default async function Home() {
       >
         Go to the dashboard
       </Link>
+      {data.map((post) => (
+        <h1>{post.title}</h1>
+      ))}
     </main>
   );
 }
