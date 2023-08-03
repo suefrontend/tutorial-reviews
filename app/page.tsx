@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+async function getPosts() {
+  const res = await fetch("/api/getPosts");
+}
 export default function Home() {
   return (
     <main className="py-7 px-48">
