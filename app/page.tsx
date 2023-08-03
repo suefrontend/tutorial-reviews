@@ -1,9 +1,15 @@
 import Link from "next/link";
 
 async function getPosts() {
-  const res = await fetch("/api/getPosts");
+  const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
+  if (!res.ok) {
+    console.log("Error", res);
+  }
+  return res.json();
 }
-export default function Home() {
+export default async function Home() {
+  const data = await getPosts();
+  console.log("data", data);
   return (
     <main className="py-7 px-48">
       <Link
