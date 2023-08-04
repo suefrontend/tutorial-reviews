@@ -10,6 +10,7 @@ async function getPosts() {
 }
 export default async function Home() {
   const data: { id: number; title: string }[] = await getPosts();
+  console.log("data", data);
 
   return (
     <main className="py-7 px-48">
@@ -20,7 +21,7 @@ export default async function Home() {
         Go to the dashboard
       </Link>
       {data.map((post) => (
-        <h1>{post.title}</h1>
+        <p>{post.title}</p>
       ))}
       <Form />
     </main>

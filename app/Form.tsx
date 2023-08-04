@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Form = () => {
   const [title, setTitle] = useState("");
+  const router = useRouter();
 
   async function submitPost(e: React.FormEvent) {
     e.preventDefault();
@@ -13,6 +15,8 @@ const Form = () => {
     });
 
     const res = await data.json();
+    router.refresh();
+    setTitle("");
     if (!res.ok) console.log(res.message);
   }
 
