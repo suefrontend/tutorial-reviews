@@ -8,13 +8,34 @@ interface Post {
   content: string;
 }
 
-async function ArticleList({ id, title, content }: Post) {
-  // const result = await prisma.post.findMany();
-  // console.log("result", result);
+async function getPosts() {
+  const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
+  if (!res.ok) console.log(res);
+
+  return res.json();
+}
+
+interface ArticleListProps {
+  id: string;
+  title: string;
+  content: string;
+}
+
+async function ArticleList() {
+  const data: { id: string; title: string; content: string }[] =
+    await getPosts();
+  console.log("data", data);
 
   return (
     <div className="flex flex-col">
-      <ArticleItem key={id} title={title} content={content} id={id} />
+      {data.map((article) => (
+        <ArticleItem
+          key={article.id}
+          title={article.title}
+          content={article.content}
+          id={article.id}
+        />
+      ))}
     </div>
   );
 }
