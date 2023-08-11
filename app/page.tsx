@@ -16,10 +16,15 @@ export default async function Home() {
     <main className="py-7 px-48">
       Blog!
       {data.map((article) => (
-        <div>
-          <h3>Title: {article.title}!!!</h3>
-          <p>Content: {article.content}</p>
-        </div>
+        <>
+          <ArticleList
+            key={article.id}
+            title={article.title}
+            content={article.content}
+          />
+          <h2>TITLE: {article.title}</h2>
+          <p>CONTENT: {article.content}</p>
+        </>
       ))}
     </main>
   );

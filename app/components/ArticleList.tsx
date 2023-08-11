@@ -13,12 +13,12 @@ async function ArticleList() {
   console.log("result", result);
 
   return (
-    <div className="flex">
+    <div className="flex flex-col">
       {result.map((article) => (
         <ArticleItem
           key={article.id}
-          content={article.content}
           title={article.title}
+          content={article.content}
         />
       ))}
     </div>

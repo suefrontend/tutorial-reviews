@@ -1,19 +1,21 @@
 // schema.prisma
 
 generator client {
-    provider        = "prisma-client-js"
-    previewFeatures = ["jsonProtocol"]
+    provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("POSTGRES_PRISMA_URL") // uses connection pooling
+    provider          = "postgresql"
+    url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+    directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+    shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
 model Post {
     id        String  @id @default(cuid())
     title     String
     content   String
+    imageUrl  String
     published Boolean @default(false)
     author    User?   @relation(fields: [authorId], references: [id])
     authorId  String?
