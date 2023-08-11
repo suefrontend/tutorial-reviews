@@ -8,12 +8,12 @@ interface Post {
   content: string;
 }
 
-async function getPosts() {
-  const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
-  if (!res.ok) console.log(res);
+// async function getPosts() {
+//   const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
+//   if (!res.ok) console.log("error!", res);
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 interface ArticleListProps {
   id: string;
@@ -22,12 +22,13 @@ interface ArticleListProps {
 }
 
 async function ArticleList() {
-  const data: { id: string; title: string; content: string }[] =
-    await getPosts();
-  console.log("data", data);
+  // const data: { id: string; title: string; content: string }[] =
+  //   await getPosts();
+  const data = await prisma.post.findMany();
 
   return (
     <div className="flex flex-col">
+      Sleepy
       {data.map((article) => (
         <ArticleItem
           key={article.id}
