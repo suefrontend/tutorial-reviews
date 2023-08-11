@@ -14,7 +14,7 @@ async function ArticleList({ id, title, content }: Post) {
 
   return (
     <div className="flex flex-col">
-      <ArticleItem key={id} title={title} content={content} />
+      <ArticleItem key={id} title={title} content={content} id={id} />
     </div>
   );
 }

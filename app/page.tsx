@@ -23,8 +23,6 @@ export default async function Home() {
             title={article.title}
             content={article.content}
           />
-          {/* <h2>TITLE: {article.title}</h2>
-          <p>CONTENT: {article.content}</p> */}
         </>
       ))}
     </main>
