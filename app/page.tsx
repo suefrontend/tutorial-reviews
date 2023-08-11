@@ -8,7 +8,7 @@ async function getPosts() {
 }
 
 export default async function Home() {
-  const data: { id: number; title: string; content: string }[] =
+  const data: { id: string; title: string; content: string }[] =
     await getPosts();
   console.log("data", data);
 
@@ -19,11 +19,12 @@ export default async function Home() {
         <>
           <ArticleList
             key={article.id}
+            id={article.id}
             title={article.title}
             content={article.content}
           />
-          <h2>TITLE: {article.title}</h2>
-          <p>CONTENT: {article.content}</p>
+          {/* <h2>TITLE: {article.title}</h2>
+          <p>CONTENT: {article.content}</p> */}
         </>
       ))}
     </main>

@@ -1,26 +1,20 @@
-import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
+import { PrismaClient } from "@prisma/client";
 import ArticleItem from "./ArticleItem";
 
 interface Post {
-  id: number;
+  id: string;
   title: string;
-  content: string | null;
+  content: string;
 }
 
-async function ArticleList() {
-  const result = await prisma.post.findMany();
-  console.log("result", result);
+async function ArticleList({ id, title, content }: Post) {
+  // const result = await prisma.post.findMany();
+  // console.log("result", result);
 
   return (
     <div className="flex flex-col">
-      {result.map((article) => (
-        <ArticleItem
-          key={article.id}
-          title={article.title}
-          content={article.content}
-        />
-      ))}
+      <ArticleItem key={id} title={title} content={content} />
     </div>
   );
 }
