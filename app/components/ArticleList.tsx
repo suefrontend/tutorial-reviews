@@ -5,7 +5,7 @@ import ArticleItem from "./ArticleItem";
 interface Post {
   id: number;
   title: string;
-  content: string;
+  content: string | null;
 }
 
 async function ArticleList() {
