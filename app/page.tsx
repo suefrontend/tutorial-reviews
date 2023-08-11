@@ -1,18 +1,29 @@
-import { PrismaClient } from "@prisma/client";
+import ArticleList from "./components/ArticleList";
 
-const prisma = new PrismaClient();
+async function getPosts() {
+  const res = await fetch(`${process.env.BASE_URL}/api/getPosts`);
+  if (!res.ok) console.log(res);
+
+  return res.json();
+}
 
 export default async function Home() {
-  const result = await prisma.post.findMany();
-  console.log("result", result);
+  const data: { id: number; title: string; content: string }[] =
+    await getPosts();
+  console.log("data", data);
 
   return (
     <main className="py-7 px-48">
       Blog!
-      {result.map((el) => (
+      {data.map((article) => (
         <>
-          <h2>{el.title}</h2>
-          <p>{el.content}</p>
+          <ArticleList
+            key={article.id}
+            title={article.title}
+            content={article.content}
+          />
+          <h2>TITLE: {article.title}</h2>
+          <p>CONTENT: {article.content}</p>
         </>
       ))}
     </main>
