@@ -2,7 +2,7 @@
 
 Tutorial Paradise is a Jamstack web application that showcases video tutorials I've explored and mastered as a Full Stack Developer.
 
-!['Screenshot of home page](https://github.com/suefrontend/tutorial-reviews/blob/main/public/screenshot-plan.png?raw=true)
+!['Screenshot of home page](https://github.com/suefrontend/tutorial-reviews/blob/main/public/images/screenshot-plan.png?raw=true)
 
 ## Technologies Used
 
