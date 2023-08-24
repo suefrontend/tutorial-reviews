@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tutorial Paradise
 
-## Getting Started
+Tutorial Paradise is a Jamstack web application that showcases video tutorials I've explored and mastered as a Full Stack Developer.
 
-First, run the development server:
+!['Screenshot of home page](https://github.com/suefrontend/tutorial-reviews/blob/main/public/screenshot-plan.png?raw=true)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Next.js × Contentful
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build this platform, I use Next.js in combination with Contentful, a highly extensible headless CMS which allows me to manage content in a flexible and dynamic way.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Figma for UI Design
 
-## Learn More
+I create UI design using Figma to translate ideas into visuals.
 
-To learn more about Next.js, take a look at the following resources:
+## Live Preview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[> Live Preview](https://blog-nine-xi-36.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+\*\* Please note that the live preview may still be under development.
 
-## Deploy on Vercel
+## Preview Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Install dependencies: `npm i`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Run the development server using the following command: `npm run dev`
+
+3. Visit [http://localhost:3000](http://localhost:3000)
+
+You can also use `yarn` or `pnpm` if you prefer.
