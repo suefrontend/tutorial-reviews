@@ -26,8 +26,8 @@ const Sidebar = () => {
   return (
     <div className="border w-1/5">
       <div className="border-b">
-        <div className="p-4">
-          <div className="mb-2">Category</div>
+        <div className="p-6">
+          <div className="mb-4">Category</div>
           <ul className="flex flex-col gap-2">
             {categories.map((category) => (
               <li>

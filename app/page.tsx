@@ -8,7 +8,7 @@ export default async function Home() {
     <div className="container mx-auto">
       <Header />
       <Hero />
-      <div className="flex gap-6">
+      <div className="flex gap-10">
         <Sidebar />
         <Main />
       </div>
