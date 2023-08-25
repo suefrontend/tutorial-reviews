@@ -3,7 +3,7 @@ import ArticleList from "./ArticleList";
 
 const Main = () => {
   return (
-    <main className="w-4/5 border">
+    <main className="w-4/5">
       <ArticleList />
     </main>
   );

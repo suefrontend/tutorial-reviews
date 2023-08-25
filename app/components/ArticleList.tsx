@@ -3,7 +3,7 @@ import ArticleItem from "./ArticleItem";
 function ArticleList() {
   return (
     <div className="">
-      ArticleList
+      <p className="mb-3">All Tutorials</p>
       <ArticleItem />
     </div>
   );
