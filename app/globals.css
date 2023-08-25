@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.class {
-  font-family: var(--font-poppins);
+body {
+  color: #696c74;
 }
