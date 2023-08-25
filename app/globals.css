@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #ccc;
+.class {
+  font-family: var(--font-poppins);
 }
