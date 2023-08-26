@@ -1,3 +1,4 @@
+import { Checkbox } from "@/components/ui/Checkbox";
 import React from "react";
 
 const Sidebar = () => {
@@ -47,7 +48,7 @@ const Sidebar = () => {
             {platforms.map((platform) => (
               <li>
                 <label className="flex">
-                  <input type="checkbox" className="mr-2" />
+                  <Checkbox />
                   <span className="font-light">{platform.display}</span>
                 </label>
               </li>

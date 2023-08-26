@@ -4,7 +4,7 @@ function ArticleItem() {
   return (
     <article className="border p-5">
       <div className="border-b">
-        <h3 className="text-primary text-lg font-medium -mb-1">
+        <h3 className="text-blue text-lg font-medium -mb-1">
           Advanced CSS and Sass: Flexbox, Grid, Animations and More!
         </h3>
         <div className="flex items-center py-4">

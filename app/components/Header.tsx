@@ -1,12 +1,16 @@
+import { Input } from "@/components/ui/Input";
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="py-4 border-b">
       <div className="container flex justify-between items-center">
-        <h1 className="text-primary font-semibold">Tutorial Paradise</h1>
-        <input
-          type="text"
+        <Link href="/" className="text-blue font-semibold">
+          Tutorial Paradise
+        </Link>
+        <Input
           placeholder="Search tutorial"
-          className="bg-bggray px-3 py-1 rounded-sm"
+          className="w-[280px] bg-gray-100 border-0"
         />
       </div>
     </header>
