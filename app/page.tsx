@@ -5,12 +5,14 @@ import Sidebar from "./components/Sidebar";
 
 export default async function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
       <Header />
-      <Hero />
-      <div className="flex gap-10">
-        <Sidebar />
-        <Main />
+      <div className="container">
+        <Hero />
+        <div className="flex gap-10">
+          <Sidebar />
+          <Main />
+        </div>
       </div>
     </div>
   );
