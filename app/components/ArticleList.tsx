@@ -11,9 +11,9 @@ function ArticleList() {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <p className="mb-3">All Tutorials</p>
+        <p className="mb-3 text-lg">All Tutorials</p>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[180px] rounded-none">
             <SelectValue placeholder="Sort by" />
           </SelectTrigger>
           <SelectContent>

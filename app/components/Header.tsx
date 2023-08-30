@@ -10,7 +10,7 @@ const Header = () => {
         </Link>
         <Input
           placeholder="Search tutorial"
-          className="w-[280px] bg-gray-100 border-0"
+          className="w-[280px] bg-gray-100 border-0 rounded-none placeholder:text-gray-300"
         />
       </div>
     </header>
