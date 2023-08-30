@@ -2,21 +2,21 @@ import Image from "next/image";
 
 function ArticleItem() {
   return (
-    <article className="border p-5">
+    <article className="border p-6">
       <div className="border-b">
-        <h3 className="text-primary text-lg font-medium -mb-1">
+        <h3 className="text-blue text-lg font-medium -mb-1">
           Advanced CSS and Sass: Flexbox, Grid, Animations and More!
         </h3>
         <div className="flex items-center py-4">
           <ul className="flex mr-2 gap-2">
-            <li className="flex items-center text-sm text-light font-light py-[2px] px-2 bg-bggray rounded-sm">
+            <li className="flex items-center text-[12px] text-lightgray font-light py-[2px] px-2 bg-bggray">
               CSS
             </li>
-            <li className="flex items-center text-sm text-light font-light py-[2px] px-2 bg-bggray rounded-sm">
+            <li className="flex items-center text-[12px] text-lightgray font-light py-[2px] px-2 bg-bggray">
               Tailwind CSS
             </li>
           </ul>
-          <p className="text-light text-sm font-light">
+          <p className="font-light text-sm text-lightgray">
             Advanced · Paid · 2018 · 70:25:39
           </p>
         </div>
@@ -33,7 +33,7 @@ function ArticleItem() {
           />
         </div>
         {/* </div> */}
-        <p className="font-light w-4/5">
+        <p className="font-light w-4/5 leading-relaxed -mt-1">
           Lorem ipsum dolor sit amet consectetur. Bibendum enim ornare sagittis
           molestie. Curabitur iaculis fermentum volutpat ut turpis feugiat sit
           pellentesque. At aliquam adipiscing.
