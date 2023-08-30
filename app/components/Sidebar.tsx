@@ -41,7 +41,7 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
-      <div className="border-b">
+      <div className="">
         <div className="p-4">
           <div className="mb-4 text-lg">Platform</div>
           <ul className="flex flex-col gap-4">
