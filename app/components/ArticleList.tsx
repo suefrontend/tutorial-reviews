@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/Select";
 import ArticleItem from "./ArticleItem";
 
-function ArticleList() {
+function ArticleList(props) {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
@@ -22,7 +22,7 @@ function ArticleList() {
           </SelectContent>
         </Select>
       </div>
-      <ArticleItem />
+      <ArticleItem blog={props.blog} />
     </div>
   );
 }
