@@ -11,7 +11,7 @@ const client = createClient({
 });
 
 const getBlogEntries = async () => {
-  const entries = await client.getEntries({ content_type: "blog" });
+  const entries = await client.getEntries({ content_type: "tutorial" });
   console.log("entries", entries)
   return entries;
 };

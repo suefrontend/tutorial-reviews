@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function ArticleItem(props) {
   const { blog } = props;
@@ -6,14 +8,14 @@ function ArticleItem(props) {
   console.log("blog", blog);
 
   return blog.items.map((item) => {
-    const { title } = item.fields;
+    const { title, content, slug } = item.fields;
 
     return (
       <article className="border p-6">
         <div className="border-b">
-          <h3 className="text-blue text-lg font-medium -mb-1">
-            {title}
-          </h3>
+          <Link href={`/articles/${slug}`}>
+            <h3 className="text-blue text-lg font-medium -mb-1">{title}</h3>
+          </Link>
           <div className="flex items-center py-4">
             <ul className="flex mr-2 gap-2">
               <li className="flex items-center text-[12px] text-lightgray font-light py-[2px] px-2 bg-bggray">
@@ -43,11 +45,12 @@ function ArticleItem(props) {
             />
           </div>
           {/* </div> */}
-          <p className="font-light w-4/5 leading-relaxed -mt-1">
-            Lorem ipsum dolor sit amet consectetur. Bibendum enim ornare
+          <div className="font-light w-4/5 leading-relaxed -mt-1">
+            {/* Lorem ipsum dolor sit amet consectetur. Bibendum enim ornare
             sagittis molestie. Curabitur iaculis fermentum volutpat ut turpis
-            feugiat sit pellentesque. At aliquam adipiscing.
-          </p>
+            feugiat sit pellentesque. At aliquam adipiscing. */}
+            {documentToReactComponents(content)}
+          </div>
         </div>
       </article>
     );
